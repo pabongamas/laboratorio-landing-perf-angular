@@ -12,6 +12,7 @@ interface Source {
 export class ImgComponent implements AfterContentInit {
   @Input() path = '';
   @Input() alt = '';
+  @Input() class = '';
   sources: Source[] = [];
 
   constructor() { }
