@@ -15,7 +15,11 @@
     "lint": "ng lint",
     "images": "npm run images:resize && npm run images:compress",
     "images:resize": "node scripts/resize.mjs",
-    "images:compress": "node scripts/compress.mjs"
+    "images:compress": "node scripts/compress.mjs",
+    "dev:ssr": "ng run landing-perf-angular:serve-ssr",
+    "serve:ssr": "node dist/landing-perf-angular/server/main.js",
+    "build:ssr": "ng build && ng run landing-perf-angular:server",
+    "prerender": "ng run landing-perf-angular:prerender"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +34,6 @@
     "@fortawesome/angular-fontawesome": "0.11.1",
     "@fortawesome/fontawesome-svg-core": "6.1.1",
     "@fortawesome/free-solid-svg-icons": "6.1.1",
-    "@nguniversal/express-engine": "^16.2.0",
     "chart.js": "3.8.0",
     "date-fns": "^2.30.0",
     "ng2-charts": "3.1.2",
@@ -40,13 +43,13 @@
     "zone.js": "0.13.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "15.2.9",
+    "@angular-devkit/build-angular": "16.2.2",
     "@angular-eslint/builder": "14.0.2",
     "@angular-eslint/eslint-plugin": "14.0.2",
     "@angular-eslint/eslint-plugin-template": "14.0.2",
     "@angular-eslint/schematics": "14.0.2",
     "@angular-eslint/template-parser": "14.0.2",
-    "@angular/cli": "15.2.9",
+    "@angular/cli": "16.2.2",
     "@angular/compiler-cli": "16.2.5",
     "@lhci/cli": "0.9.0",
     "@types/jasmine": "4.0.0",
